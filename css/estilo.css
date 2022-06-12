@@ -1,4 +1,4 @@
-main {
+main{
     display: flex;
     flex-wrap: nowrap;
     height: 100vh !important;
@@ -6,7 +6,7 @@ main {
     overflow-y: hidden;
 }
 
-.b-example-divider {
+.b-example-divider{
     flex-shrink: 0;
     width: 1.5rem;
     height: 100vh;
@@ -17,22 +17,11 @@ main {
         inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
 
-.mapa {
+.mapa{
     margin-top: 8%;
-    width: 75% !important;
-    height: 600px !important;
+    width: 90% !important;
+    height: 700px !important;
     border: 2px solid black;
-    display: grid;
-    grid-template-columns: 1fr 0.5fr 1.5fr 1.4fr 0.6fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        ". prueba1 prueba1 prueba1 prueba1 ."
-        "prueba2 . . . . prueba3"
-        "prueba2 . prueba5 prueba5 . prueba3"
-        ". . . . . ."
-        ". prueba4 prueba4 prueba4 prueba4 .";
 }
 
 .villas,
@@ -49,13 +38,12 @@ main {
     align-content: center;
     justify-content: center;
     align-items: center;
-
     padding: 2%;
-    width: 140px;
+    width: 120px;
     height: 100px;
     list-style: none;
     margin-left: 10px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     border: 2px solid black;
 }
 
@@ -77,33 +65,50 @@ main {
     align-content: center;
     justify-content: center;
     align-items: center;
-
     padding: 2%;
-    width: 116px;
+    width: 120px;
     height: 100px;
     list-style: none;
-    margin-left: 10px;
+    /* margin-left: 10px;*/
     margin-top: 10px;
     border: 2px solid black;
 }
-
-
-.prueba1 {
-    grid-area: prueba1;
+.column{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+li{
+    list-style: none;
+}
+.club{
+    width: 117px;
+    height: 140px;
+    border: 2px solid #000;
+}
+.garita{
+    width: 117px;
+    height: 55px;
+    border: 2px solid #000;
+    margin-left: 100px;
+    background-color: green
+}
+.colorRed{
+    background-color: red;
+}
+.colorGreen{
+    background-color: green;
+}
+.colorYellow{
+    background-color: yellow;
+}
+.colorGray{
+    background-color: gray;
 }
 
-.prueba2 {
-    grid-area: prueba2;
-}
-
-.prueba3 {
-    grid-area: prueba3;
-}
-
-.prueba5 {
-    grid-area: prueba5;
-}
-
-.prueba4 {
-    grid-area: prueba4;
+.nav-link:active{
+    background-color: #00bcd4;
 }

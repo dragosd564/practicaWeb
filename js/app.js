@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 
-
+ 
 function loadData() {
     fetch(url).then(rep => rep.json())
         .then((data) => {
