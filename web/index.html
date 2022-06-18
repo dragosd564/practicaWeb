@@ -17,23 +17,23 @@
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link active text-white">
+                <li onclick="cambios('todos')" class="nav-item">
+                    <a class="nav-link active text-white">
                         Residentes
                     </a>
                 </li>
-                <li>
-                    <a href="sinDeudas.html" class="nav-link text-white">
+                <li onclick="cambios('verde')" class="nav-item">
+                    <a class="nav-link text-white">
                         Residentes sin deudas
                     </a>
                 </li>
-                <li>
-                    <a href="conDeudas.html" class="nav-link text-white">
+                <li onclick="cambios('amarillo')" class="nav-item">
+                    <a class="nav-link text-white">
                         Residentes con deudas
                     </a>
                 </li>
-                <li>
-                    <a href="sinDueno.html" class="nav-link text-white">
+                <li onclick="cambios('gris')" class="nav-item">
+                    <a class="nav-link text-white">
                         Residencias sin propietarios
                     </a>
                 </li>
@@ -43,61 +43,35 @@
         <div class="b-example-divider"></div>
         <div class="container">
             <div class="container mapa">
-                <ul class="villas2">
-                    <li class="casas colorYellow">1</li>
-                    <li class="casas colorGreen">2</li>
-                    <li class="casas colorYellow">3</li>
-                    <li class="casas colorGreen">4</li>
-                    <li class="casas colorGreen">5</li>
-                    <li class="casas colorGreen">6</li>
+                <ul class="villas2" id="villas2">
                 </ul>
                 <div class="container" style="display: flex;">
                     <div class="col">
-                        <ul class="villas">
-                            <li class="casas colorGreen">1</li>
-                            <li class="casas colorGreen">2</li>
-                            <li class="casas colorYellow">3</li>
-                            <li class="casas colorGreen">4</li>
+                        <ul class="villas" id="villas">
                         </ul>
                     </div>
                     <div class="column">
-                        <ul class="villas5">
-                            <li class="club"></li>
-                            <li class="casas colorRed">1</li>
-                            <li class="casas colorGreen">2</li>
-                            <li class="casas colorGreen">3</li>
-                            <li class="casas colorGreen">4</li>
-                        </ul>
-                        <ul class="villas4" style="display: none">
-                            <li class="casas">1</li>
-                            <li class="casas">2</li>
-                            <li class="casas">3</li>
-                            <li class="casas">4</li>
-                            <li class="casas">5</li>
+                        <li class="club">
+                            <h4>Parque</h4>
+                        </li>
+                        <ul class="villas5" id="villas5">
                         </ul>
                     </div>
                     <div class="col">
-                        <ul class="villas3" style="    display: flex;
+                        <ul class="villas3"  id="villas3" style="display: flex;
                         flex-direction: column;
                         align-content: flex-end;
                         align-items: flex-end;">
-                            <li class="casas colorGreen">1</li>
-                            <li class="casas colorGray">2</li>
-                            <li class="casas colorGreen">3</li>
-                            <li class="casas colorGreen">4</li>
                         </ul>
                     </div>
                 </div>
-                <ul class="villas2" style="padding-left: 100px;">
-                    <li class="casas colorGray">1</li>
-                    <li class="casas colorGreen">2</li>
-                    <li class="casas colorYellow">3</li>
-                    <li class="casas colorYellow">4</li>
-                    <li class="casas colorRed">5</li>
+                <ul class="villas4" id="villas4" style="padding-left: 100px;">
+                    
                 </ul>
                 <div class="garita"></div>
               </div>
         </div>
     </main>
+    <script src="/js/app.js"></script>
 </body>
 </html>
