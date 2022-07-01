@@ -3,24 +3,32 @@ let villas2 = document.getElementById('villas2');
 let villas3 = document.getElementById('villas3');
 let villas4 = document.getElementById('villas4');
 let villas5 = document.getElementById('villas5');
-
+//tabla
+const tabla = document.querySelector('#lista-Fechas tbody');
+const row = document.createElement('tr');
+//nav
 let nav = document.getElementsByClassName('.nav-link');
-
+//datos
 const url = '/data/datos.json';
-
+//variables extras
 let estado = "";
 let datos;
-let navLink = document.querySelectorAll('.nav-link');
+let o;
+let nombreEstados ;
+//arreglos de datos
+let vil = [villas, villas2, villas3, villas4, villas5];
+let manzanas = [1, 4, 3, 2, 5];
 
-navLink.forEach(navlink =>{
-    navlink.addEventListener('click', function(){
-        navLink.forEach(navlink =>navlink.classList.remove('active'));
+//nav
+let navLink = document.querySelectorAll('.nav-link');
+navLink.forEach(navlink => {
+    navlink.addEventListener('click', function () {
+        navLink.forEach(navlink => navlink.classList.remove('active'));
         this.classList.add('active');
     })
 });
-
+//iniciar DOM
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM cargado');
     loadData();
 })
 
@@ -28,16 +36,37 @@ function loadData() {
     fetch(url).then(rep => rep.json())
         .then((data) => {
             datos = data;
-            var vil = [villas, villas2, villas3, villas4, villas5];
-            var manzanas = [1,4,3,2,5];
             for (let i = 0; i < manzanas.length; i++) {
                 addtoPage(data, vil[i], manzanas[i]);
             }
         })
 }
 
-function myFunction(id) {
-  console.log(id);
+function modal(id) {
+    document.getElementById('id01').style.display='block';
+    document.getElementById('nombres').innerHTML = id.nombre;  
+    Colores(id.estado);
+
+    tabla.innerHTML = '';
+    row.innerHTML = `
+    <td>${id.telefono}</td>
+    <td>${id.email}</td>
+    <td>${id.email}</td>
+    <td>${id.email}</td>
+    <td style="background:${o};color:white;">${nombreEstados}</td>
+    <td>
+    <img src="/assets/descarga.png" width="25px" height="30px" onclick="modalTransacion()"/>
+    </td>
+    `;
+    tabla.appendChild(row);
+    
+}
+function closeModal() {
+    document.getElementById('id01').style.display='none';
+    document.getElementById('modalTransaccion').style.display='none';
+}
+function modalTransacion(){
+    document.getElementById('modalTransaccion').style.display='block';
 }
 
 function addtoPage(arr, villa, manzana) {
@@ -49,7 +78,7 @@ function addtoPage(arr, villa, manzana) {
             lista.classList.add('casas');
             lista.textContent = casa?.id_residente;
             villa.appendChild(lista);
-            lista.onclick = function() {myFunction(casa.id_residente)};
+            lista.onclick = function () { modal(casa) };
         }
         switch (casa.estado) {
             case 'verde':
@@ -78,25 +107,16 @@ function cambios(color) {
 function mostrarColores(color) {
     switch (color) {
         case 'todos':
-            addtoPage(datos, villas, 1);
-            addtoPage(datos, villas2, 4);
-            addtoPage(datos, villas3, 3);
-            addtoPage(datos, villas4, 2);
-            addtoPage(datos, villas5, 5);
-            break;
-        case 'verde':
-            for (let i = 0; i < datos.urbanizaciones.length; i++) {
-                let casa = datos.urbanizaciones[i];
-                let lista = document.createElement('li');
-                estado = casa.estado;
-                colorManzana(casa, lista);
-                switch (casa.estado) {
-                    case 'verde':
-                        lista.style.backgroundColor = 'green';
-                        break;
-                }
+            for (let i = 0; i < manzanas.length; i++) {
+                addtoPage(datos, vil[i], manzanas[i]);
             }
             break;
+        case 'verde':
+            listaDeCasas('verde', 'green');
+            break;
+        case 'gris':
+            listaDeCasas('gris', 'gray');
+            break
         case 'amarillo':
             for (let i = 0; i < datos.urbanizaciones.length; i++) {
                 let casa = datos.urbanizaciones[i];
@@ -113,20 +133,21 @@ function mostrarColores(color) {
                 }
             }
             break;
-        case 'gris':
-            for (let i = 0; i < datos.urbanizaciones.length; i++) {
-                let casa = datos.urbanizaciones[i];
-                let lista = document.createElement('li');
-                estado = casa.estado;
-                colorManzana(casa, lista);
-                switch (casa.estado) {
-                    case 'gris':
-                        lista.style.backgroundColor = 'gray';
-                        break;
-                }
-            }
-            break;
 
+
+    }
+}
+function listaDeCasas(colorEstado, color) {
+    for (let i = 0; i < datos.urbanizaciones.length; i++) {
+        let casa = datos.urbanizaciones[i];
+        let lista = document.createElement('li');
+        estado = casa.estado;
+        colorManzana(casa, lista);
+        switch (casa.estado) {
+            case colorEstado:
+                lista.style.backgroundColor = color;
+                break;
+        }
     }
 }
 function colorManzana(casa, lista) {
@@ -155,6 +176,26 @@ function colorManzana(casa, lista) {
             lista.classList.add('casas');
             lista.textContent = casa?.id_residente;
             villas5.appendChild(lista);
+            break;
+    }
+}
+function Colores(color) {
+    switch (color) {
+        case 'verde':
+            o = 'green';
+            nombreEstados = 'Completado';
+            break;
+        case 'gris':
+            o = 'gray';
+            nombreEstados = 'Sin propietario';
+            break;
+        case 'amarillo':
+            o = '#798707';
+            nombreEstados = 'En proceso';
+            break;
+        case 'rojo':
+            o = 'red';
+            nombreEstados = 'Pendiente';
             break;
     }
 }
