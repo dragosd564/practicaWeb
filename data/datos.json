@@ -6,7 +6,99 @@
             "villa": 1,
             "telefono": "0937465833",
             "estado": "verde",
-            "nombre": "Juan Perez"
+            "nombre": "Juan Perez",
+            "datos":[
+                {
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                },
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "amarillo"
+                },
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "amarillo"
+                },
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "amarillo"
+                },
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "amarillo"
+                },
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "amarillo"
+                },{
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "amarillo"
+                },{
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "amarillo"
+                },{
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "amarillo"
+                },{
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "amarillo"
+                },{
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "amarillo"
+                },{
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "amarillo"
+                }
+            ],
+            "fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 2,
@@ -14,7 +106,18 @@
             "villa": 2,
             "telefono": "0937462233",
             "estado": "verde",
-            "nombre": "Roy tampo"
+            "nombre": "Roy tampo",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],
+            "fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 3,
@@ -22,7 +125,18 @@
             "villa": 3,
             "telefono": "0937462232",
             "estado": "amarillo",
-            "nombre": "Roger Tudela"
+            "nombre": "Roger Tudela",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],
+            "fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 4,
@@ -30,7 +144,17 @@
             "villa": 4,
             "telefono": "0937462232",
             "estado": "verde",
-            "nombre": "Bouchra Cano"
+            "nombre": "Bouchra Cano",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 1,
@@ -38,7 +162,17 @@
             "villa": 1,
             "telefono": "0937462245",
             "estado": "gris",
-            "nombre": "Irina Perez"
+            "nombre": "Irina Perez",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 2,
@@ -46,7 +180,17 @@
             "villa": 2,
             "telefono": "0937782233",
             "estado": "verde",
-            "nombre": "Karima Minguez"
+            "nombre": "Karima Minguez",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 3,
@@ -54,7 +198,17 @@
             "villa": 3,
             "telefono": "0937782233",
             "estado": "amarillo",
-            "nombre": "Mario Guevara"
+            "nombre": "Mario Guevara",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 4,
@@ -62,7 +216,17 @@
             "villa": 4,
             "telefono": "0937782233",
             "estado": "amarillo",
-            "nombre": "Naira Casas"
+            "nombre": "Naira Casas",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 5,
@@ -70,7 +234,17 @@
             "villa": 5,
             "telefono": "0937782233",
             "estado": "rojo",
-            "nombre": "Eugenio Mendoza"
+            "nombre": "Eugenio Mendoza",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 1,
@@ -78,7 +252,17 @@
             "villa": 1,
             "telefono": "0937782233",
             "estado": "verde",
-            "nombre": "Julião Moreira"
+            "nombre": "Julião Moreira",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 2,
@@ -86,7 +270,17 @@
             "villa": 2,
             "telefono": "0937782233",
             "estado": "gris",
-            "nombre": "Elisabet Moran"
+            "nombre": "Elisabet Moran",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 3,
@@ -94,7 +288,17 @@
             "villa": 3,
             "telefono": "0937782233",
             "estado": "verde",
-            "nombre": "Ana Duran"
+            "nombre": "Ana Duran",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 4,
@@ -102,7 +306,17 @@
             "villa": 4,
             "telefono": "0937782233",
             "estado": "verde",
-            "nombre": "Gerardo Alcala"
+            "nombre": "Gerardo Alcala",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 1,
@@ -110,7 +324,17 @@
             "villa": 1,
             "telefono": "0937782233",
             "estado": "amarillo",
-            "nombre": "Victorina Salmeron"
+            "nombre": "Victorina Salmeron",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 2,
@@ -118,7 +342,17 @@
             "villa": 2,
             "telefono": "0937782233",
             "estado": "verde",
-            "nombre": "Pamela Egea"
+            "nombre": "Pamela Egea",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 3,
@@ -126,7 +360,17 @@
             "villa": 3,
             "telefono": "0937782233",
             "estado": "amarillo",
-            "nombre": "Matilde Vaca"
+            "nombre": "Matilde Vaca",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 4,
@@ -134,7 +378,17 @@
             "villa": 4,
             "telefono": "0937782233",
             "estado": "verde",
-            "nombre": "Alexis Toledano"
+            "nombre": "Alexis Toledano",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 5,
@@ -142,7 +396,17 @@
             "villa": 5,
             "telefono": "0937782233",
             "estado": "verde",
-            "nombre": "Gema Postigo"
+            "nombre": "Gema Postigo",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 6,
@@ -150,7 +414,17 @@
             "villa": 6,
             "telefono": "0937782233",
             "estado": "verde",
-            "nombre": "Maria-Fernanda Espinosa"
+            "nombre": "Maria-Fernanda Espinosa",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 1,
@@ -158,7 +432,17 @@
             "villa": 1,
             "telefono": "0937782233",
             "estado": "rojo",
-            "nombre": "Victor Díaz"
+            "nombre": "Victor Díaz",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 2,
@@ -166,7 +450,17 @@
             "villa": 2,
             "telefono": "0937782233",
             "estado": "verde",
-            "nombre": "Braulio Bastida"
+            "nombre": "Braulio Bastida",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 3,
@@ -174,7 +468,17 @@
             "villa": 3,
             "telefono": "0937782233",
             "estado": "verde",
-            "nombre": "Gemma Gracia"
+            "nombre": "Gemma Gracia",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         },
         {
             "id_residente": 4,
@@ -182,7 +486,17 @@
             "villa": 4,
             "telefono": "0937782233",
             "estado": "verde",
-            "nombre": "Lucas Ferreira"
+            "nombre": "Lucas Ferreira",
+            "datos":[
+                {
+ 
+                    "anio": "2020",
+                    "mes": 6,
+                    "fecha": "2020-06-01",
+                    "valor": "100",
+                    "estado": "verde"
+                }
+            ],"fechaInicio": "2020-06-01"
         }
 
     ]

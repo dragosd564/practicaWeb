@@ -14,7 +14,7 @@ const url = '/data/datos.json';
 let estado = "";
 let datos;
 let o;
-let nombreEstados ;
+let nombreEstados;
 //arreglos de datos
 let vil = [villas, villas2, villas3, villas4, villas5];
 let manzanas = [1, 4, 3, 2, 5];
@@ -43,30 +43,49 @@ function loadData() {
 }
 
 function modal(id) {
-    document.getElementById('id01').style.display='block';
-    document.getElementById('nombres').innerHTML = id.nombre;  
-    Colores(id.estado);
-
+    console.log(id);
+    document.getElementById('id01').style.display = 'block';
+    document.getElementById('nombres').innerHTML = id.nombre;
+    document.getElementById('fecha').innerHTML = id.fechaInicio;
+    document.getElementById('labelmanzana').innerHTML = id.manzana;
+    document.getElementById('labelVilla').innerHTML = id.villa;
     tabla.innerHTML = '';
-    row.innerHTML = `
-    <td>${id.telefono}</td>
-    <td>${id.email}</td>
-    <td>${id.email}</td>
-    <td>${id.email}</td>
-    <td style="background:${o};color:white;">${nombreEstados}</td>
-    <td>
-    <img src="/assets/descarga.png" width="25px" height="30px" onclick="modalTransacion()"/>
-    </td>
-    `;
-    tabla.appendChild(row);
-    
+
+    for (let i = 0; i < id.datos.length; i++) {
+        let infromaciontabla = id.datos[i];
+        let row = document.createElement('tr');
+        
+        Colores(infromaciontabla.estado);
+
+        row.innerHTML = `
+        <td>${infromaciontabla.anio}</td>
+        <td>${infromaciontabla.mes}</td>
+        <td>${infromaciontabla.fecha}</td>
+        <td>${infromaciontabla.valor}</td>
+        <td style="background:${o};color:white;">${nombreEstados}</td>
+        <td>
+        <img src="/assets/descarga.png" width="25px" height="30px" onclick="modalTransacion()"/>
+        </td>
+        `;
+        tabla.appendChild(row);
+    }
+
 }
+
+function modalTransacion(id) {
+    console.log(id);
+    document.getElementById('modalTransaccion').style.display = 'block';
+    document.getElementById('id01').style.display = 'none';
+}
+//funciones de cierre de mo
 function closeModal() {
-    document.getElementById('id01').style.display='none';
-    document.getElementById('modalTransaccion').style.display='none';
+    document.getElementById('id01').style.display = 'none';
 }
-function modalTransacion(){
-    document.getElementById('modalTransaccion').style.display='block';
+function closeModal1() {
+    document.getElementById('modalTransaccion').style.display = 'none';
+    setTimeout(() => {
+        document.getElementById('id01').style.display = 'block';
+    }, 100);
 }
 
 function addtoPage(arr, villa, manzana) {
@@ -156,26 +175,31 @@ function colorManzana(casa, lista) {
             lista.classList.add('casas');
             lista.textContent = casa?.id_residente;
             villas.appendChild(lista);
+            lista.onclick = function () { modal(casa) };
             break;
         case 2:
             lista.classList.add('casas');
             lista.textContent = casa?.id_residente;
             villas4.appendChild(lista);
+            lista.onclick = function () { modal(casa) };
             break;
         case 3:
             lista.classList.add('casas');
             lista.textContent = casa?.id_residente;
             villas3.appendChild(lista);
+            lista.onclick = function () { modal(casa) };
             break;
         case 4:
             lista.classList.add('casas');
             lista.textContent = casa?.id_residente;
             villas2.appendChild(lista);
+            lista.onclick = function () { modal(casa) };
             break;
         case 5:
             lista.classList.add('casas');
             lista.textContent = casa?.id_residente;
             villas5.appendChild(lista);
+            lista.onclick = function () { modal(casa) };
             break;
     }
 }
