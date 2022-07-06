@@ -19,6 +19,8 @@ let nombreEstados;
 let vil = [villas, villas2, villas3, villas4, villas5];
 let manzanas = [1, 4, 3, 2, 5];
 
+let user = localStorage.getItem('user');
+
 //nav
 let navLink = document.querySelectorAll('.nav-link');
 navLink.forEach(navlink => {
@@ -30,6 +32,7 @@ navLink.forEach(navlink => {
 //iniciar DOM
 window.addEventListener('DOMContentLoaded', () => {
     loadData();
+    document.getElementById('user').innerHTML = user;
 })
 
 function loadData() {
@@ -221,5 +224,12 @@ function Colores(color) {
             o = 'red';
             nombreEstados = 'Pendiente';
             break;
+    }
+}
+function salir(){
+    let confirmar = confirm("¿Esta seguro que desea salir?");
+    console.log(confirmar);
+    if(confirmar == true){
+        window.location.href = "/web/login.html";
     }
 }
