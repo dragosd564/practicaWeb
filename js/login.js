@@ -12,8 +12,7 @@ function Auth() {
         window.location.href = "/web/index.html";
         localStorage.setItem('user', user.value);
         localStorage.setItem('rol','admin');
-    }
-    if(user.value == "eduardo" && pwd.value == "1234"){
+    }else if(user.value == "eduardo" && pwd.value == "1234"){
         window.location.href = "/web/index.html";
         localStorage.setItem('user', user.value);
         localStorage.setItem('rol','usuario');

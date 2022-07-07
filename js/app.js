@@ -5,6 +5,7 @@ let villas4 = document.getElementById('villas4');
 let villas5 = document.getElementById('villas5');
 //tabla
 const tabla = document.querySelector('#lista-Fechas tbody');
+const tablafila = document.querySelector('#lista-Fechas thead');
 const row = document.createElement('tr');
 //nav
 let nav = document.getElementsByClassName('.nav-link');
@@ -20,7 +21,8 @@ let vil = [villas, villas2, villas3, villas4, villas5];
 let manzanas = [1, 4, 3, 2, 5];
 
 let user = localStorage.getItem('user');
-
+let rol = localStorage.getItem('rol');
+let img = '';
 //nav
 let navLink = document.querySelectorAll('.nav-link');
 navLink.forEach(navlink => {
@@ -53,25 +55,8 @@ function modal(id) {
     document.getElementById('labelmanzana').innerHTML = id.manzana;
     document.getElementById('labelVilla').innerHTML = id.villa;
     tabla.innerHTML = '';
-
-    for (let i = 0; i < id.datos.length; i++) {
-        let infromaciontabla = id.datos[i];
-        let row = document.createElement('tr');
-        
-        Colores(infromaciontabla.estado);
-
-        row.innerHTML = `
-        <td>${infromaciontabla.anio}</td>
-        <td>${infromaciontabla.mes}</td>
-        <td>${infromaciontabla.fecha}</td>
-        <td>${infromaciontabla.valor}</td>
-        <td style="background:${o};color:white;">${nombreEstados}</td>
-        <td>
-        <img src="/assets/descarga.png" width="25px" height="30px" onclick="modalTransacion()"/>
-        </td>
-        `;
-        tabla.appendChild(row);
-    }
+    tablafila.innerHTML = '';
+    vistaUsuarios(id);
 
 }
 
@@ -210,7 +195,7 @@ function Colores(color) {
     switch (color) {
         case 'verde':
             o = 'green';
-            nombreEstados = 'Completado';
+            nombreEstados = 'Pagada';
             break;
         case 'gris':
             o = 'gray';
@@ -218,18 +203,89 @@ function Colores(color) {
             break;
         case 'amarillo':
             o = '#798707';
-            nombreEstados = 'En proceso';
+            nombreEstados = 'Pendiente';
             break;
         case 'rojo':
             o = 'red';
-            nombreEstados = 'Pendiente';
+            nombreEstados = 'En Mora';
             break;
     }
 }
-function salir(){
+function salir() {
     let confirmar = confirm("¿Esta seguro que desea salir?");
     console.log(confirmar);
-    if(confirmar == true){
+    if (confirmar == true) {
         window.location.href = "/web/login.html";
     }
+}
+function vistaUsuarios(id) {
+    switch (rol) {
+        case 'admin':
+            let fila = document.createElement('tr');
+            fila.innerHTML = `
+            <th scope="col">Año</th>
+            <th scope="col">Mes</th>
+            <th scope="col">Fecha de pago</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Verificar</th>
+            <th scope="col">Evidencia</th>`;
+            tablafila.appendChild(fila);
+
+            for (let i = 0; i < id.datos.length; i++) {
+                let infromaciontabla = id.datos[i];
+                let row = document.createElement('tr');
+                Colores(infromaciontabla.estado);
+                if(infromaciontabla.estado == 'amarillo'){
+                    img = '/assets/iconrevision.png';
+                }else{
+                    img = '/assets/check.png';
+                }
+                row.innerHTML = `
+                <td>${infromaciontabla.anio}</td>
+                <td>${infromaciontabla.mes}</td>
+                <td>${infromaciontabla.fecha}</td>
+                <td>${infromaciontabla.valor}</td>
+                <td style="background:${o};color:white;">${nombreEstados}</td>
+                <td>
+                <img src="${img}" width="25px" height="30px" "/>
+                </td>
+                <td>
+                <img src="/assets/descarga.png" width="25px" height="30px" onclick="modalTransacion()"/>
+                </td>
+                `;
+                tabla.appendChild(row);
+            }
+            break;
+        case 'usuario':
+            let filaVista = document.createElement('tr');
+            filaVista.innerHTML = `
+            <th scope="col">Año</th>
+            <th scope="col">Mes</th>
+            <th scope="col">Fecha de pago</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Evidencia</th>`;
+            tablafila.appendChild(filaVista);
+            for (let i = 0; i < id.datos.length; i++) {
+                let infromaciontabla = id.datos[i];
+                let row = document.createElement('tr');
+
+                Colores(infromaciontabla.estado);
+
+                row.innerHTML = `
+                <td>${infromaciontabla.anio}</td>
+                <td>${infromaciontabla.mes}</td>
+                <td>${infromaciontabla.fecha}</td>
+                <td>${infromaciontabla.valor}</td>
+                <td style="background:${o};color:white;">${nombreEstados}</td>
+                <td>
+                <img src="/assets/descarga.png" width="25px" height="30px" onclick="modalTransacion()"/>
+                </td>
+                `;
+                tabla.appendChild(row);
+            }
+            break;
+    }
+
 }
